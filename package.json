@@ -2,7 +2,7 @@
   "name": "smart-vscode-copy",
   "displayName": "Smart Code Copy",
   "description": "Copy and reference code snippets easily and consistently",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "publisher": "samlloydw",
   "icon": "icon.png",
   "repository": {
