@@ -21,3 +21,11 @@ All notable changes to the "Smart VSCode Copy" extension will be documented in t
 ### Fixed
 - Fixed an issue where single-line selections would show a range (e.g., L10-L10).
 - Resolved inconsistent indentation when copying nested functions.
+
+## [1.1.0] - 2026-04-04
+
+- Updated display name and metadata
+
+## [1.1.1] - 2026-04-04
+
+- Updated CHANGELOG.md
