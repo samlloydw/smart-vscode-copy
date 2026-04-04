@@ -17,7 +17,6 @@ export function getGitInfo(uri: vscode.Uri) {
     const remote = repo.state.remotes[0]?.fetchUrl || "local";
     const hash = repo.state.HEAD?.commit?.substring(0, 7) || "unsaved";
     
-    // Clean repo string
     const cleanRepo = remote.replace('https://', '').replace('.git', '');
     return { repo: cleanRepo, hash };
 }

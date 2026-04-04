@@ -3,12 +3,8 @@ import * as styles from './styles';
 import * as context from './context';
 import * as git from './git';
 
-
-/**
- * Shared logic to build and copy the string
- */
 async function runCopyReference(includeCode: boolean) {
-	const config = vscode.workspace.getConfiguration('reference-vscode');
+	const config = vscode.workspace.getConfiguration('smart-vscode-copy');
 	const includeGit = config.get<boolean>('includeGitInfo');
     const style = config.get<string>('referenceStyle') || "Standard";
 
@@ -36,14 +32,12 @@ async function runCopyReference(includeCode: boolean) {
 }
 
 export function activate(context: vscode.ExtensionContext) {
-    // Command 1: Full
     context.subscriptions.push(
-        vscode.commands.registerCommand('reference-vscode.detailed-reference', () => runCopyReference(true))
+        vscode.commands.registerCommand('smart-vscode-copy.code-block-reference', () => runCopyReference(true))
     );
 
-    // Command 2: Lite (No code block)
     context.subscriptions.push(
-        vscode.commands.registerCommand('reference-vscode.simple-reference', () => runCopyReference(false))
+        vscode.commands.registerCommand('smart-vscode-copy.simple-reference', () => runCopyReference(false))
     );
 }
 
