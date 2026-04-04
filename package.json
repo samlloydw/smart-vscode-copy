@@ -2,7 +2,7 @@
   "name": "smart-vscode-copy",
   "displayName": "Smart Code Copy",
   "description": "Copy and reference code snippets easily and consistently",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "samlloydw",
   "icon": "icon.png",
   "repository": {
@@ -71,7 +71,11 @@
         },
         "smart-vscode-copy.referenceStyle": {
           "type": "string",
-          "enum": ["Standard", "GitHubLink", "Minimalist"],
+          "enum": [
+            "Standard",
+            "GitHubLink",
+            "Minimalist"
+          ],
           "default": "Standard",
           "description": "Choose the formatting style for the metadata."
         }
