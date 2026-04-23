@@ -60,6 +60,8 @@ class Standard implements IReferenceStrategy {
 
 class GitHubLink implements IReferenceStrategy {
     generate(data: ReferenceMetadata): string {
+        // TODO: create function that can make link for different online repo hosts
+        /// We will only support links in https
         const repoDetails = data.repo ? `https://${data.repo}/blob/${data.hash}/` : `local-repo/`;
         const url = `${repoDetails}${data.path}#${this.formatLines(data.lines)}`;
         return `${url}\n${data.context}`;
@@ -89,7 +91,7 @@ export class ReferenceEngine {
     private readonly strategy: IReferenceStrategy;
 
     constructor(strategyName?: string) {
-        this.strategy = (strategyName && this.strategies[strategyName]) 
+        this.strategy = (strategyName && this.strategies[strategyName])
             || this.strategies["Standard"];
     }
 
