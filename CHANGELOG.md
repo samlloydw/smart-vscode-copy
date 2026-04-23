@@ -33,3 +33,7 @@ All notable changes to the "Smart VSCode Copy" extension will be documented in t
 ## [1.1.2] - 2026-04-07
 
 - Changed VSCode version to 1.60.0 as APIs are stable.
+
+## [1.1.5] - 2026-04-07
+
+- Ensure that ssh repos are converted to http links for github
